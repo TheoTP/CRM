@@ -64,7 +64,7 @@ class Photo
     return $sourceGDImage;
   }
   
-  private function createThumbnail()      
+  public function createThumbnail()      
   {
     $this->photoThumbURI = SystemURLs::getImagesRoot() . "/" . $this->photoType . "/thumbnails/" . $this->id.".png";
     $thumbWidth = 100;
@@ -113,7 +113,7 @@ class Photo
   
   public function getPhotoURI()
   {
-    return $this->photoThumbURI;
+    return $this->photoURI;
   }
   
   public function isPhotoLocal()
